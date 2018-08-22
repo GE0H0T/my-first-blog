@@ -1,0 +1,49 @@
+<!-- 기준이 되는 템플릿하나를 정의하고 탬플릿의 내용을 상속받는 식으로 한다 유지개보수에 좋다-->
+
+{% load staticfiles %} <!-- 파이썬에서 import가 되어야 한다-->
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext">
+<link rel="stylesheet" href="{% static "blog/blog.css" %}" /> <!-- link를 걸어 css파일을 포함해서 쓴다-->
+<!-- CSS 를 적용할때는 html에 섞어 쓰는것이 아니라 하나의 독립된 파일을 만들어 include 시켜쓰거나 웹에서 끌어다 쓴다-->
+<!-- 9번의 코드는 동적으로 static이 변경이 될 때 동기화를 위해 장고에서 알아서 가져온다??!-->
+        <!--<style>
+            body{
+                background-color: black;
+            }
+            a{
+                color: #ffffff;
+            }
+            p{
+                color: #ffffff;
+            }
+        </style>-->
+    </head>
+    
+    <body>
+        <div class = "page-header"> 
+            {% if user.is_authenticated %} <!-- 현재 유저가 로그인이 되어있다면 이 아래 링크를 보여준다-->
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+            <!-- 여기서 로그인을 하지 않으면 +가 사라짐-->
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content%} 
+                    <!-- 부모가 만든 block내에서 자식의 컨텐츠를 표현할 수 있다-->
+                    <!-- 즉 여기 블락 밖의 html이나 body등의 부모 컨텐츠를 상속받고-->
+                    <!-- 블락안에 자식(자신)의 컨텐츠를 만들어 부모+자신이 된다 -->
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

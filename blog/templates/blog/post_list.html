@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %} <!-- 상속을 받는 순간 자식은 어떤 블락을 지정해서 컨텐츠를 공급하는 일밖에 못한다 -->
+
+{% block content %}
+    
+    {% for post in post_list %}
+        <div class="post">
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
+            </div>
+            <h1><a href="{% url "post_detail" post.pk %}"> <!-- 장고템플릿으로 처리할것인데 url 처리할때 post_detail를 활용할 것이고 필요한 인자는 post.pk이다-->
+                
+                {{ post.title }}
+            </a>
+        </h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}

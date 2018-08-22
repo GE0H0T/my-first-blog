@@ -1,0 +1,17 @@
+<python django blog server start -> 재부팅시 서버를 작동시키고 강좌를 들어야 할때>
+
+1. 블로그가 다 만들어진 상태에서 cmd 창을 열고
+
+D: (해당 장고가 설치된 곳의 드라이브)로 간다
+
+2. cd Django
+
+3. myvenv\Script\Activation?? (myvenv\s 치고 tab만 쳐도 나온다)
+
+4. 위의 명령어는 장고 프로젝트의 가상환경으로 들어가는 명령어
+
+5. (myvenv) 라고 접두어가 붙은 상태에서 python manage.py runserver 입력
+
+6. 서버가 시작된 상황에서 크롬이나 익스플로러 같은 브라우저를 열고 http://localhost:8000를 입력
+
+7. 블로그 서버의 첫 페이지인 post_list.html에 프로그래밍 된 내용이 브라우저로 출력된다

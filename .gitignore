@@ -1,0 +1,11 @@
+*.pyc 
+*~
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
+.ipynb_checkpoints
+*.ipynb
+
+# git에다가 이력을 남기지 않겠다는 뜻

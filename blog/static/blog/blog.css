@@ -1,0 +1,65 @@
+
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+body
+{
+    background-color: #FFFFFF;
+}
+.content { /* 전체 다 말고 콘텐츠 영역만 (양옆 여백 x)*/
+    margin-left: 40px;
+    /*background-color:aqua;*/
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date { /* 날짜의 색을 바꾼다*/
+    color: #09ff00;
+} /* 이 date를 바꾸던지 밑에 .post .date를 바꾸던지 둘 중에 하나를 바꾼다*/
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+    
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+    
+}
+
+.post { /* 제목 말고 메인 포스트 내용의 속성*/
+    margin-bottom: 70px;
+    color:darkslateblue;
+    
+}
+
+.post h1 a, .post h1 a:visited ,
+.post h2 a, .post h2 a:visited  
+{
+    color: #000000;
+}
+
+/*.post .date{ /* post class의 date의 속성에 대해 다룬다
+    color: green;
+}*/
+
+/* css 클래스는 파이썬의 클래스와는 다른 개념이고 어떤 태그에 대해서 속성을 다수 지정할 수 있다는 것*/
+
