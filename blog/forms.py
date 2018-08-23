@@ -8,3 +8,4 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title','text'] # ()같은 튜플보다는 [] 리스트를 사용하는 것이 좋다
+        
